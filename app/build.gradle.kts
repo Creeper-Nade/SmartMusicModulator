@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
 }
 
+
 android {
-    namespace = "com.example.musicswitcher"
+    namespace = "com.RocTech.musicswitcher"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.musicswitcher"
+        applicationId = "com.RocTech.musicswitcher"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -38,6 +39,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation("com.amap.api:3dmap-location-search:latest.integration")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

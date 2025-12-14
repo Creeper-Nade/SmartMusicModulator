@@ -1,4 +1,4 @@
-package com.example.musicswitcher;
+package com.RocTech.musicswitcher;
 
 import android.content.Context;
 
