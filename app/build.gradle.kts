@@ -1,3 +1,5 @@
+import com.android.build.api.dsl.Packaging
+
 plugins {
     alias(libs.plugins.android.application)
 }
@@ -17,6 +19,10 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters.add("arm64-v8a")
+            abiFilters.add("armeabi-v7a")
+        }
     }
 
     buildTypes {
@@ -39,7 +45,11 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation("com.amap.api:3dmap-location-search:latest.integration")
+    //implementation(fileTree("libs") { include("*.jar") })
+    //implementation("com.amap.api:3dmap-location-search:latest.integration")
+    //implementation("com.amap.api:search:latest.integration")
+    //implementation("com.amap.api:location:latest.integration")
+    implementation("com.amap.api:3dmap-location-search:10.1.600_loc6.5.1_sea9.7.4")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

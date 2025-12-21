@@ -20,6 +20,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MapDisplay"/>
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="67bd75883b86dd43247d2b565f880db2" />
